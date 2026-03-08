@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Заявка</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+  <img src="photo/logo.png" class="logo left">
+  <h1>Анкетирование личного состава</h1>
+  <img src="photo/logo1.gif" class="logo right">
+</div>
+
+<form id="form">
+
+  <!-- Подразделения -->
+  <div class="departament-title"><b>Бөліністер</b></div>
+  <div class="departament">
+    <label class="radio">
+      <input type="radio" name="departament" value="1 рота" required>
+      <span>1 ЖМР</span>
+    </label>
+    <label class="radio">
+      <input type="radio" name="departament" value="2 рота">
+      <span>2 ЖМР</span>
+    </label>
+    <label class="radio">
+      <input type="radio" name="departament" value="3 рота">
+      <span>3 ЖМР</span>
+    </label>
+  </div>
+
+  <!-- ФИО -->
+  <div>
+    <label>ФИО</label>
+    <input type="text" name="fio" required minlength="3" maxlength="50">
+  </div>
+
+  <!-- Телефон -->
+  <div>
+    <label>Телефон</label>
+    <input type="text" name="phone" required minlength="10" maxlength="16">
+  </div>
+
+  <!-- Дата рождения -->
+  <div>
+    <label>Туылған күні</label>
+    <input type="date" name="birthday" required>
+  </div>
+
+  <!-- Семейное положение -->
+   <div class="family-title"><b>Отбасылық жағдайы</b></div>
+  <div class="family">
+  
+    <label class="radio">
+      <input type="radio" name="family" value="Женат" required>
+      <span>Үйленген</span>
+    </label>
+    <label class="radio">
+      <input type="radio" name="family" value="Не женат">
+      <span>Үйленбеген</span>
+    </label>
+  </div>
+
+  <!-- Согласие -->
+  <div style="display:flex;gap:10px;align-items:center; margin-bottom:15px;">
+    <input type="checkbox" name="rule" required style="width:auto;">
+    <label style="margin:0;">Мен деректерді өңдеуге келісемін</label>
+  </div>
+
+  <!-- Кнопка отправки -->
+  <button type="submit">👉 Жіберу</button>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

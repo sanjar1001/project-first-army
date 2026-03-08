@@ -1,0 +1,119 @@
+/* ===== Военный стиль для сайта ===== */
+body {
+  font-family: 'Russo One', Arial, sans-serif;
+  background: #1f2d1f url('photo/camo.png') repeat;
+  margin: 0;
+  padding: 0;
+  color: #e0e0d1;
+}
+
+/* ===== Шапка ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 15px 10px;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 2px solid #556b2f;
+}
+
+.logo {
+  width: 50px;
+  position: absolute;
+  top: 10px;
+}
+
+.logo.left { left: 10px; }
+.logo.right { right: 10px; }
+
+.header h1 {
+  text-align: center;
+  font-size: 22px;
+  color: #f5f5dc;
+  margin: 0;
+}
+
+/* ===== Форма ===== */
+form {
+  background: rgba(46, 61, 46, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border: 2px solid #556b2f;
+}
+
+/* Метки и заголовки */
+label { display: block; margin-bottom: 5px; font-weight: bold; color: #f5f5dc; }
+.departament-title, .family-title { margin-bottom: 8px; font-weight: bold; font-size: 16px; text-align: center; }
+
+/* Поля ввода */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #556b2f;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #1f2d1f;
+  color: #e0e0d1;
+}
+
+/* ===== Радио кнопки ===== */
+.departament, .family { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+
+.radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio span {
+  display: inline-block;
+  min-width: 80px;
+  padding: 8px 12px;
+  border: 2px solid #556b2f;
+  border-radius: 8px;
+  background-color: #2e3d2e;
+  color: #e0e0d1;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.radio:hover span { background-color: #3b502f; }
+.radio input:checked + span { background-color: #6b8e23; color: #fff; }
+
+/* ===== Кнопка отправки ===== */
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #556b2f;
+  color: #f5f5dc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #6b8e23;
+  transform: scale(1.02);
+}
+
+/* ===== Мобильная адаптация ===== */
+@media (max-width: 480px) {
+  body { padding: 10px; }
+  .header h1 { font-size: 18px; padding: 0 40px; }
+  form { padding: 15px; margin: 10px auto; }
+  input, textarea { font-size: 15px; }
+  button { font-size: 16px; padding: 12px; }
+  .logo { width: 40px; }
+}
