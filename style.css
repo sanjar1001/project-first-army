@@ -1,4 +1,4 @@
-/* ===== Военный стиль для сайта ===== */
+
 body {
   font-family: 'Russo One', Arial, sans-serif;
   background: #1f2d1f url('photo/camo.png') repeat;
@@ -16,6 +16,49 @@ body {
   padding: 15px 10px;
   background: rgba(0,0,0,0.3);
   border-bottom: 2px solid #556b2f;
+}
+
+/* Splash экран */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #1f2d1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease;
+  z-index: 9999;
+}
+
+.splash-logo {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: logoFade 1.5s forwards; /* 'forwards' оставляет конечное состояние */
+}
+
+#splash h2 {
+  color: #f5f5dc;
+}
+
+/* лёгкая анимация логотипа */
+@keyframes logoFade {
+  from {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* сайт скрыт пока splash работает */
+#main-content {
+  display: none;
 }
 
 .logo {
@@ -43,6 +86,27 @@ form {
   margin: 20px auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   border: 2px solid #556b2f;
+}
+
+.rank {
+  margin-bottom: 15px;
+}
+
+/*Стили для выпадающего списка */
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #556b2f;
+  background: #1f2d1f;
+  color: #e0e0d1;
+  font-size: 16px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #6b8e23;
 }
 
 /* Метки и заголовки */
@@ -106,6 +170,28 @@ button {
 button:hover {
   background: #6b8e23;
   transform: scale(1.02);
+}
+
+.child-block{
+
+background:#2e3d2e;
+
+padding:12px;
+
+margin-top:10px;
+
+border-radius:8px;
+
+border:1px solid #556b2f;
+
+}
+
+.child-block h4{
+
+margin-top:0;
+
+color:#f5f5dc;
+
 }
 
 /* ===== Мобильная адаптация ===== */
