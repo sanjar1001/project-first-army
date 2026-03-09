@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Заявка</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
+  <div id="splash">
+  <img src="photo/logo.png" class="splash-logo">
+  <h2>6506 әскери бөлімі 1 ЖМБ жеке құрамның анықтамалық тізімі!</h2>
+</div>
+
 <div class="header">
-  <img src=" logo.png" class="logo left">
-  <h1>Анкетирование личного состава</h1>
-  <img src=" logo1.gif" class="logo right">
+  <img src="photo/logo.png" class="logo left">
+  <h1>6506 әскери бөлімі 1 ЖМБ жеке құрамның анықтамалық тізімі!</h1>
+  <img src="photo/logo1.gif" class="logo right">
 </div>
 
 <form id="form">
@@ -34,14 +35,59 @@
     <label class="radio">
       <input type="radio" name="departament" value="3 рота">
       <span>3 ЖМР</span>
+    </label>    <label class="radio">
+      <input type="radio" name="departament" value="БВ">
+      <span>БВ</span>
+    </label>
+        <label class="radio">
+      <input type="radio" name="departament" value="ГРВ">
+      <span>ГРВ</span>
+    </label>
+        <label class="radio">
+      <input type="radio" name="departament" value="АВТО В">
+      <span>АВ</span>
+    </label>
+        <label class="radio">
+      <input type="radio" name="departament" value="МТҚеВ">
+      <span>МТҚеВ</span>
+    </label>
+     </label>
+        <label class="radio">
+      <input type="radio" name="departament" value="ӘЖБ">
+      <span>ӘЖБ</span>
+    </label>
+     </label>
+        <label class="radio">
+      <input type="radio" name="departament" value="МП">
+      <span>МП</span>
     </label>
   </div>
+
 
   <!-- ФИО -->
   <div>
     <label>ФИО</label>
     <input type="text" name="fio" required minlength="3" maxlength="50">
   </div>
+
+
+  <!-- Войснкое звание -->
+  <div class="rank">
+  <label><b>Әскери атағы</b></label>
+
+  <select name="rank" required>
+    <option name="">Шен таңдаңыз</option>
+    <option name="Рядовой">Қатардағы</option>
+    <option name="Ефрейтор">Ефрейтор</option>
+    <option name="Младший сержант">Кіші сержант</option>
+    <option name="Сержант">Сержант</option>
+    <option name="Старший сержант">Аға сержант</option>
+    <option name="Старшина">3ші сынып Сержант</option>
+    <option name="Лейтенант">Лейтенант</option>
+    <option name="Капитан">Капитан</option>
+    <option name="Майор">Майор</option>
+  </select>
+</div>
 
   <!-- Телефон -->
   <div>
@@ -55,6 +101,28 @@
     <input type="date" name="birthday" required>
   </div>
 
+    <!-- Войснкое звание -->
+  <div class="car">
+  <label><b>Көлік маркасы</b></label>
+
+  <select name="car" required>
+    <option name="Жоқ">Көлік жоқ</option>
+    <option name="Mersedes">Mersedes</option>
+    <option name="BMW">BMW</option>
+    <option name="Audi">Audi</option>
+    <option name="Volkswagen">Volkswagen</option>
+    <option name="Toyota">Toyota</option>
+    <option name="Lexus">Lexus</option>
+    <option name="Nissan">Nissan</option>
+    <option name="Hyundai">Hyundai</option>
+    <option name="Kia">Kia</option>
+    <option name="Opel">Opel</option>
+    <option name="Changan">Changan</option>
+    <option name="BYD">BYD</option>
+    <option name="Lada">Lada</option>
+  </select>
+</div>
+
   <!-- Семейное положение -->
    <div class="family-title"><b>Отбасылық жағдайы</b></div>
   <div class="family">
@@ -66,8 +134,14 @@
     <label class="radio">
       <input type="radio" name="family" value="Не женат">
       <span>Үйленбеген</span>
-    </label>
   </div>
+  
+   </label>
+
+        <label>Бала саны</label>
+    <input type="text" name="children">
+ 
+
 
   <!-- Согласие -->
   <div style="display:flex;gap:10px;align-items:center; margin-bottom:15px;">
@@ -83,5 +157,4 @@
 <script src="script.js"></script>
 
 </body>
-
 </html>
